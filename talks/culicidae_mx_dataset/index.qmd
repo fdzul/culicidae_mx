@@ -1,5 +1,5 @@
 ---
-title: "Distribución de mosquitos con importancia en Salud Pública de México"
+title: "Distribución de Mosquitos con Importancia en Salud Pública de México"
 subtitle: "Bases de Datos"
 author: "Felipe Dzul"
 format: revealjs
