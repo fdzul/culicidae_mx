@@ -10,7 +10,7 @@ editor: visual
 
 ```{r}
 fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx", 
-             recurse = 0)
+             recurse = 1)
 ```
 
 
