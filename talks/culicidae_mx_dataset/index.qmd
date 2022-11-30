@@ -1,18 +1,140 @@
 ---
-title: "Distribución de Mosquitos con Importancia en Salud Pública de México"
-subtitle: "Bases de Datos"
-author: "Felipe Dzul"
-format: revealjs
-editor: visual
+format: 
+  revealjs:
+    #theme: ["theme/q-theme.scss"]
+    slide-number: c/t
+    logo: "https://salud.yucatan.gob.mx/files/get/2889?v=1669754780"
+    footer: "[github.com/fdzul](https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset/#/title-slide)"
+    code-copy: true
+    center-title-slide: false
+highlight-style: a11y
+code-link: true
+height: 1080
+width: 1600
+execute: 
+  eval: true
+  echo: true
 ---
 
-## Quarto
+<h1>Distribución de Mosquitos con Importancia<br>en Salud Pública en México</h1>
 
-```{r}
-fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx", 
-             recurse = 1)
+<h2> </h2>
+
+<hr>
+
+<h3> Felipe Dzul Manzanilla </h3><h3>Fabián Correa Morales</h3> <h3>Herón Huerta</h3>
+
+<h3> 2022-06-02 </h3>
+<br>
+
+<h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/fdzul](https://fdzul.github.io/web_site_fadm/)
+
+![](){.absolute top=425 left=1100 width="300"}
+![](){.absolute top=680 left=1250 width="300"}
+
+
+## Temas
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+-   Fuentes de Información y Flujograma
+-   Organizacion 
+
+## Flujograma de la Información
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+```{r flujograma, dpi=400, echo=FALSE, fig.align ="center", out.height="100%", out.width = "100%"}
+DiagrammeR::grViz("digraph {
+                  # graph definitions
+  graph [layout = dot, rankdir = TB]
+  
+  # node definitions
+  node [shape = rectangle, style = filled, color = grey, 
+  nodesep = 1, 
+  fixedsize = false, 
+  width = 1.7] 
+  
+  # edge definition
+  edge [color = grey, arrowhead = normal, arrowtail = dot]
+  
+  ##### fuentes de información
+  
+  inf [label = 'Fuentes de Información',  fillcolor =  '#DB4437', color = 'white', fontcolor = 'white']
+  
+  
+  ##### datasets
+  
+  cenaprece [label = 'CENAPRECE',  fillcolor =  '#0F9D58', color = 'white', fontcolor = 'white']
+  
+  indre [label = 'InDre',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  
+  revision [label = 'Revisión',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  bas_per [label = 'Bases Personales',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  gbif [label = 'gbif',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+ 
+ # 
+ anofeles [label = 'Anopheles',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ culicidae [label = 'Culicidae',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ ao [label = 'Aldo Ortega',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ ro [label = 'Rafael Ojeda',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ 
+ spocc [label = 'spocc',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ geodata [label = 'geodata',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+
+ # final dataset
+ 
+ data_final [label = 'Culicidae_mx_dataset',  fillcolor =  'DodgerBlue', color = 'white', fontcolor = 'white']
+ 
+ 
+ ##### define the relation
+ 
+ inf -> {cenaprece indre revision bas_per gbif}
+ indre -> {anofeles culicidae} -> data_final
+ bas_per -> {ao ro} -> data_final
+ 
+ gbif -> {spocc geodata} -> data_final
+ cenaprece -> data_final
+
+ 
+}")
+
 ```
 
+
+## Organización de las Bases de Datos
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+:::: {.columns}
+
+::: {.column width="40%"}
+```{r}
+fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx", 
+             recurse = 0)
+```
+
+:::
+
+::: {.column width="60%"}
+
+```{r}
+fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx/1.datasets", 
+             recurse = 0)
+```
+
+:::
+
+::::
+
+## Organización de las Bases de Datos
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+```{r}
+fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
+             recurse = 1)
+```
 
 ## Bullets
 
