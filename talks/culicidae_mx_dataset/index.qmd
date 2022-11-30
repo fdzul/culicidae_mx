@@ -29,8 +29,9 @@ execute:
 
 <h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/fdzul](https://fdzul.github.io/web_site_fadm/)
 
-![](){.absolute top=425 left=1100 width="300"}
-![](){.absolute top=680 left=1250 width="300"}
+
+![](https://wrbu.si.edu/keys/AF_AE_A/key/Aedes_Afrotropical_AFRICOM_A/Media/Images/PP_AeAlb09a.jpg){.absolute top=425 left=1100 width="300"}
+![](https://wrbu.si.edu/keys/AF_AE_A/key/Aedes_Afrotropical_AFRICOM_A/Media/Images/PP_AeAeg01b.jpg){.absolute top=680 left=1250 width="300"}
 
 
 ## Temas
@@ -110,7 +111,7 @@ DiagrammeR::grViz("digraph {
 
 ::: {.column width="40%"}
 ```{r}
-fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx", 
+fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx", 
              recurse = 0)
 ```
 
@@ -119,7 +120,7 @@ fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx",
 ::: {.column width="60%"}
 
 ```{r}
-fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx/1.datasets", 
+fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets", 
              recurse = 0)
 ```
 
@@ -132,7 +133,7 @@ fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx/1.datasets",
 &nbsp;
 
 ```{r}
-fs::dir_tree("/Users/fdzul/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
+fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
              recurse = 1)
 ```
 
@@ -161,7 +162,7 @@ When you click the **Render** button a presentation will be generated that inclu
 
 - ***celular***     :     [8139945623]()
 
-- ***slides***:     https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset/#/title-slide
+- ***slides***:     https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset
 
 
 
