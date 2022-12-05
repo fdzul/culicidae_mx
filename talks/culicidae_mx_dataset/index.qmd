@@ -111,7 +111,7 @@ DiagrammeR::grViz("digraph {
 
 ::: {.column width="40%"}
 ```{r}
-fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx", 
+fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx", 
              recurse = 0)
 ```
 
@@ -120,7 +120,7 @@ fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx",
 ::: {.column width="60%"}
 
 ```{r}
-fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets", 
+fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets", 
              recurse = 0)
 ```
 
@@ -133,16 +133,29 @@ fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets",
 &nbsp;
 
 ```{r}
-fs::dir_tree("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
+fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
              recurse = 1)
 ```
 
-## Bullets
+## Registros de **Aedes aegypti**
 
-When you click the **Render** button a document will be generated that includes:
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Step 1. load the dataset ###
+load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+culicidae_mx_dataset |>
+    dplyr::mutate(specie = dplyr::case_when(specie %in% c("Aedes aegypti",
+                                                          "Aedes Stegomyia  aegypti  Linnaeus, 1762 ") ~ "Aedes aegypi",
+                                            TRUE ~ specie)) |>
+    dplyr::filter(specie == "Aedes aegypi") |>
+    dplyr::group_by(dataset, specie) |>
+    dplyr::summarise(occ = dplyr::n(),
+                     occ_unique = dplyr::n_distinct(long, lat),
+                     .groups = "drop") |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic()
 
--   Content authored with markdown
--   Output from executable code
+```
+
 
 ## Code
 
