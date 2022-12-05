@@ -423,8 +423,8 @@ Herón Huerta
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="htmlwidget-a91fadda1af2995e5fb3" style="width:100%;height:100%;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a91fadda1af2995e5fb3">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9c75f46101b06c9457e9" style="width:100%;height:100%;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9c75f46101b06c9457e9">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="organización-de-las-bases-de-datos" class="slide level2"><h2>Organización de las Bases de Datos</h2>
@@ -441,6 +441,7 @@ Herón Huerta
 ├── 2.scripts
 ├── 3.outputs
 ├── 4.functions
+├── Untitled.R
 ├── anofeles_indre_2015_2020.csv
 └── culicidae_mx.Rproj</code></pre>
 </div>
@@ -484,6 +485,7 @@ Herón Huerta
 </div>
 </section><section id="registros-de-aedes-aegypti" class="slide level2"><h2>Registros de <strong>Aedes aegypti</strong>
 </h2>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <div class="cell">
 <div class="cell-output-display">
 
@@ -535,12 +537,1594 @@ Herón Huerta
 </table>
 </div>
 </div>
-</section><section id="code" class="slide level2"><h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+</section><section id="registros" class="slide level2"><h2>Registros</h2>
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="cell-output-display">
+
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:100%; "><table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<thead><tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> dataset </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> specie </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> occ </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> occ_unique </th>
+  </tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Aedes aegypi </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Aedes albopictus </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Aedes epactius </td>
+   <td style="text-align:right;"> 972 </td>
+   <td style="text-align:right;"> 134 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Aedes scapularis </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Anopheles  punctipennis </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Anopheles aztecus </td>
+   <td style="text-align:right;"> 68 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex (Lutzia) bigoti </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex apicalis </td>
+   <td style="text-align:right;"> 30 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex arizonensis </td>
+   <td style="text-align:right;"> 60 </td>
+   <td style="text-align:right;"> 16 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex bidens </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex coronator </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex erraticus </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex erythrothorax </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex pinarocampa </td>
+   <td style="text-align:right;"> 161 </td>
+   <td style="text-align:right;"> 47 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex quinquedasciatus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex quinquefasciatus </td>
+   <td style="text-align:right;"> 847 </td>
+   <td style="text-align:right;"> 104 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex quinquefasciatus, </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex restuans </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex salinarius </td>
+   <td style="text-align:right;"> 85 </td>
+   <td style="text-align:right;"> 28 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex stigmatosoma </td>
+   <td style="text-align:right;"> 734 </td>
+   <td style="text-align:right;"> 125 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex tarsalis </td>
+   <td style="text-align:right;"> 61 </td>
+   <td style="text-align:right;"> 27 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex thriambus </td>
+   <td style="text-align:right;"> 37 </td>
+   <td style="text-align:right;"> 25 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culex trhiambus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culiseta inornata </td>
+   <td style="text-align:right;"> 120 </td>
+   <td style="text-align:right;"> 38 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Culiseta particeps </td>
+   <td style="text-align:right;"> 647 </td>
+   <td style="text-align:right;"> 115 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Uranotaenia lowii </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> cdmx </td>
+   <td style="text-align:left;"> Uranotaenia sapphirina </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> gbif_geodata </td>
+   <td style="text-align:left;"> Aedes aegypi </td>
+   <td style="text-align:right;"> 1329 </td>
+   <td style="text-align:right;"> 1237 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> gbif_spocc </td>
+   <td style="text-align:left;"> Aedes aegypi </td>
+   <td style="text-align:right;"> 7042 </td>
+   <td style="text-align:right;"> 2149 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> gbif_spocc </td>
+   <td style="text-align:left;"> Aedes albopictus </td>
+   <td style="text-align:right;"> 650 </td>
+   <td style="text-align:right;"> 397 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> gbif_spocc </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:right;"> 992 </td>
+   <td style="text-align:right;"> 430 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Aedes aegypi </td>
+   <td style="text-align:right;"> 3845 </td>
+   <td style="text-align:right;"> 972 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Aedes albopictus </td>
+   <td style="text-align:right;"> 454 </td>
+   <td style="text-align:right;"> 251 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles albimanus </td>
+   <td style="text-align:right;"> 223 </td>
+   <td style="text-align:right;"> 59 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles aztecus </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles bradleyi </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles crucians </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles eiseni </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles parapunctipennis </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles pseudopunctipennis </td>
+   <td style="text-align:right;"> 371 </td>
+   <td style="text-align:right;"> 164 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles punctipennis </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 13 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles quadrimaculatus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Anopheles vestitipennis </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Haemagogus anastasionis </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> indre </td>
+   <td style="text-align:left;"> Haemagogus equinus </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes   Protomacleaya &nbsp; lewnielseni Ortega and Zavortink </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes  Ochlerotatus  amateuri Ortega and Zavortink </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes albopictus </td>
+   <td style="text-align:right;"> 109 </td>
+   <td style="text-align:right;"> 90 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes bimaculatus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes epactius </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes fluviatilis </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes fulvus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes gabriel </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Howardina &nbsp;cozumelensis&nbsp;Díaz‐Nájera, 1966 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes melanimon </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;angustivittatus&nbsp;Dyar and Knab, 1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;angustivittatus&nbsp;Dyar and Knab, 1908 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;angustivittatus&nbsp;Dyar and Knab, 1909 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;euplocamus&nbsp;Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;euplocamus&nbsp;Dyar &amp; Knab,&nbsp;1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;euplocamus&nbsp;Dyar &amp; Knab,&nbsp;1908 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;fulvus&nbsp; Wiedemann, 1828 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;scapularis&nbsp; Rondani, 1848 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;Scapularis Group species </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;serratus&nbsp; Theobald, 1901 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;taeniorhynchus&nbsp; Wiedemann, 1821 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes podographicus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes podographicus s.l. </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Stegomyia &nbsp;aegypti&nbsp; Linnaeus, 1762 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> An. gabaldoni </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;apicimacula&nbsp;Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;apicimacula&nbsp;Dyar &amp; Knab,&nbsp;1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;crucianss.l. Wiedemann, 1828 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;crucianss.l. Wiedemann, 1829 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;crucianss.l. Wiedemann, 1830 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;crucianss.l. Wiedemann, 1831 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;pseudopunctipennis&nbsp; Theobald, 1901 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;veruslanei&nbsp;Vargas, 1979 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;veruslanei&nbsp;Vargas, 1980 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;vestitipennis&nbsp;Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;vestitipennis&nbsp;Dyar &amp; Knab,&nbsp;1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Anopheles &nbsp;vestitipennis&nbsp;Dyar &amp; Knab,&nbsp;1908 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles crucians s.l. </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles darlingi </td>
+   <td style="text-align:right;"> 37 </td>
+   <td style="text-align:right;"> 25 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Nyssorhynchus &nbsp;albimanus&nbsp;Wiedemann, 1820 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Nyssorhynchus &nbsp;albimanus&nbsp;Wiedemann, 1821 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Nyssorhynchus &nbsp;albimanus&nbsp;Wiedemann, 1822 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Anopheles Nyssorhynchus &nbsp;albimanus&nbsp;Wiedemann, 1823 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Coquillettidia Rhynchotaenia &nbsp;venezuelensis&nbsp; Theobald, 1912 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex  Melanoconion  theobaldi </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex bihaicola </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;coronators.l. Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;coronators.l. Dyar &amp; Knab,&nbsp;1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;interrogator&nbsp;Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;interrogator&nbsp;Dyar &amp; Knab,&nbsp;1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;nigripalpus&nbsp;Theobald, 1901 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;nigripalpus&nbsp;Theobald, 1902 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;nigripalpus&nbsp;Theobald, 1903 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;quinquefasciatus&nbsp;Say, 1823 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Culex &nbsp;quinquefasciatus&nbsp;Say, 1824 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex daumastocampa </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex inflictus </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex lactator </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Melanoconion &nbsp;erraticus&nbsp; Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Melanoconion &nbsp;taeniopus&nbsp;Dyar &amp; Knab, 1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex Melanoconion &nbsp;taeniopus&nbsp;Dyar &amp; Knab, 1908 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex metempsytus </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex mutator </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex pedroi </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex rejector </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex restrictor </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex salinarius </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex spissipes </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Culex trifidus </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Cx. lactator </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Cx. trifidus </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Haemagogus Haemagogus &nbsp;equinus&nbsp;Theobald, 1903 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Haemagogus Haemagogus &nbsp;equinus&nbsp;Theobald, 1904 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Haemagogus Haemagogus &nbsp;equinus&nbsp;Theobald, 1905 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Haemagogus Haemagogus &nbsp;equinus&nbsp;Theobald, 1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Limatus durhamii&nbsp;Theobald, 1901 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Limatus durhamii&nbsp;Theobald, 1902 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Limatus durhamii&nbsp;Theobald, 1903 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Limatus durhamii&nbsp;Theobald, 1904 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Mansonia dyari </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora  Janthinosoma  ferox </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora  Psorophora  cilipes </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora cingulata </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora columbiae </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora cyanescens </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora Janthinosoma &nbsp;albipes&nbsp; Theobald, 1907 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora Janthinosoma &nbsp;champerico&nbsp; Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora Janthinosoma &nbsp;cyanescens&nbsp; Coquillett, 1902 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora Janthinosoma &nbsp;ferox&nbsp; von Humboldt, 1819 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora Janthinosoma &nbsp;lutzii&nbsp; Theobald, 1901 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora lineata </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora Psorophora &nbsp;ciliata&nbsp; Fabricius, 1794 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Psorophora varipes&nbsp; </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Shannoniana moralesi </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Uranotaenia nataliae </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Uranotaenia sapphirina&nbsp; </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 9 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Uranotaenia socialis </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Wyeomyia guatemala s.l. </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Wyeomyia mitchellii </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Wyeomyia nigritubus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Wyeomyia Wyeomyia &nbsp;celaenocephala&nbsp;Dyar &amp; Knab,&nbsp;1906 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Wyeomyia Wyeomyia &nbsp;celaenocephala&nbsp;Dyar &amp; Knab,&nbsp;1907 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedeomyia squamipennis </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes aegypi </td>
+   <td style="text-align:right;"> 205 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes albopictus </td>
+   <td style="text-align:right;"> 459 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes angustivittatus </td>
+   <td style="text-align:right;"> 126 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes dupreei </td>
+   <td style="text-align:right;"> 24 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes epactius </td>
+   <td style="text-align:right;"> 221 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes euplocamus </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes fulvus </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes gabriel </td>
+   <td style="text-align:right;"> 41 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes infirmatus </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus sp </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes podographicus </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes ramirezi </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes scapularis </td>
+   <td style="text-align:right;"> 1242 </td>
+   <td style="text-align:right;"> 15 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes serratus </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes sp </td>
+   <td style="text-align:right;"> 187 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes sp1 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes sp2 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes sp3 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes taeniorhynchus </td>
+   <td style="text-align:right;"> 2493 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes tormentor </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes tortilis </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes triseriatus </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes trivittatus </td>
+   <td style="text-align:right;"> 23 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Aedes vexans </td>
+   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles albimanus </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles bradleyi </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles eiseni </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles pseudopunctipennis </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles sp </td>
+   <td style="text-align:right;"> 81 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles veruslanei </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Anopheles vestitipennis </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Chagasia bathana </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Coquillettidia nigricans </td>
+   <td style="text-align:right;"> 42 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Coquillettidia perturbans </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Coquillettidia sp </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Coquillettidia venezuelensis </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex bidens </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex chidesteri </td>
+   <td style="text-align:right;"> 54 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex conspirator </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex corniger </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex coronator </td>
+   <td style="text-align:right;"> 175 </td>
+   <td style="text-align:right;"> 15 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex crybda </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex declarator </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex dunni </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex erraticus </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex interrogator </td>
+   <td style="text-align:right;"> 647 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex iolambdis </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex lactator </td>
+   <td style="text-align:right;"> 57 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex Melanoconion sp </td>
+   <td style="text-align:right;"> 128 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex nigripalpus </td>
+   <td style="text-align:right;"> 2145 </td>
+   <td style="text-align:right;"> 11 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex panocossa </td>
+   <td style="text-align:right;"> 220 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex quinquefasciatus </td>
+   <td style="text-align:right;"> 26 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex restrictor </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex restuans </td>
+   <td style="text-align:right;"> 28 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex sandrae </td>
+   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex sp </td>
+   <td style="text-align:right;"> 1218 </td>
+   <td style="text-align:right;"> 21 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex sp1 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex sp2 </td>
+   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex sp3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex stenolepis </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex stigmatosoma </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex taeniopus </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex tarsalis </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex theobaldi </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Culex thriambus </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Haemagogus equinus </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Haemagogus mesodentatus </td>
+   <td style="text-align:right;"> 42 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Haemagogus regalis </td>
+   <td style="text-align:right;"> 26 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Johnbelkinia ulopus </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Limatus assuleptus </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Limatus sp </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Mandonia indubitans </td>
+   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Mansonia dyari </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Mansonia indubitans </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Mansonia titillans </td>
+   <td style="text-align:right;"> 42 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:right;"> 56 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> NA sp </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora albipes </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora ciliata </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora confinnis </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora cyanescens </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora ferox </td>
+   <td style="text-align:right;"> 74 </td>
+   <td style="text-align:right;"> 9 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora sp </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora sp1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora sp2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorophora varipes </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Psorphora ferox </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Sabethes chloropterus </td>
+   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Toxorhynchites theobaldi </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Trichoprosopon digitatum </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia calosomata </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia coatzacoalcos </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia geometrica </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia leucoptera </td>
+   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia lowii </td>
+   <td style="text-align:right;"> 138 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia pulcherrima </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia saphirina </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia socialis </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Uranotaenia sp </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Wyeomyia abebela </td>
+   <td style="text-align:right;"> 24 </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> ro </td>
+   <td style="text-align:left;"> Wyeomyia sp </td>
+   <td style="text-align:right;"> 17 </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Aedes aegypi </td>
+   <td style="text-align:right;"> 11083 </td>
+   <td style="text-align:right;"> 459 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Aedes albopictus </td>
+   <td style="text-align:right;"> 1353 </td>
+   <td style="text-align:right;"> 183 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Aedes otra </td>
+   <td style="text-align:right;"> 1360 </td>
+   <td style="text-align:right;"> 117 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Anopheles albimanus </td>
+   <td style="text-align:right;"> 378 </td>
+   <td style="text-align:right;"> 81 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Anopheles otra </td>
+   <td style="text-align:right;"> 29 </td>
+   <td style="text-align:right;"> 14 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Anopheles pseudopunctipennis </td>
+   <td style="text-align:right;"> 826 </td>
+   <td style="text-align:right;"> 138 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Anopheles vestitipennis </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Culex coronator </td>
+   <td style="text-align:right;"> 313 </td>
+   <td style="text-align:right;"> 92 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Culex quinquefasciatus </td>
+   <td style="text-align:right;"> 1060 </td>
+   <td style="text-align:right;"> 181 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Culex salinarius </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Culex stigmatosoma </td>
+   <td style="text-align:right;"> 242 </td>
+   <td style="text-align:right;"> 41 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Culex tarsalis </td>
+   <td style="text-align:right;"> 43 </td>
+   <td style="text-align:right;"> 14 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> veim </td>
+   <td style="text-align:left;"> Culex thriambus </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:right;"> 9 </td>
+  </tr>
+</tbody>
+</table></div>
+
 </div>
 </div>
 </section><section id="dios-botic" class="slide level2"><h2>Dios Botic!</h2>
