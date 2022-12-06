@@ -187,7 +187,7 @@ culicidae_mx_dataset |>
                      .groups = "drop") |>
     kableExtra::kable() |>
     kableExtra::kable_classic() |>
-    kableExtra::scroll_box(width = "100%", height = "500px")
+    kableExtra::scroll_box(width = "100%", height = "800px")
 ```
 
 ## Área de ocupación
@@ -219,7 +219,7 @@ tibble::tibble(specie = c(rep("Aedes aegypti", 12)),
                species_range = c(1277, 580, 31, 46004, 160, 160, 47187, 327, 327, 951, 34, 34)) |>
     kableExtra::kable() |>
     kableExtra::kable_classic() |>
-    kableExtra::scroll_box(height = "100%",
+    kableExtra::scroll_box(height = "800px",
                            width = "100%")
 ```
 
