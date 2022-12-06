@@ -73,6 +73,8 @@ DiagrammeR::grViz("digraph {
   revision [label = 'Revisión',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
   bas_per [label = 'Bases Personales',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
   gbif [label = 'gbif',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  
+  conabio [label = 'CONABIO',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
  
  # 
  anofeles [label = 'Anopheles',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
@@ -82,20 +84,33 @@ DiagrammeR::grViz("digraph {
  
  spocc [label = 'spocc',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
  geodata [label = 'geodata',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ 
 
  # final dataset
  
  data_final [label = 'Culicidae_mx_dataset',  fillcolor =  'DodgerBlue', color = 'white', fontcolor = 'white']
  
+ ###
+ aegypti [label = 'Aedes agypti',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white']
+ 
+ albopictus [label = 'Aedes albopictus',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white']
+ 
+ range [label = 'Rangos de Distribución',  fillcolor =  '#E01E5A', color = 'white', fontcolor = 'white']
+ 
+ lgcp [label = 'Log Gaussian Cox Process',  fillcolor =  '#E01E5A', color = 'white', fontcolor = 'white']
  
  ##### define the relation
  
- inf -> {cenaprece indre revision bas_per gbif}
+ inf -> {cenaprece indre revision bas_per gbif conabio}
  indre -> {anofeles culicidae} -> data_final
  bas_per -> {ao ro} -> data_final
  
  gbif -> {spocc geodata} -> data_final
  cenaprece -> data_final
+ revision -> data_final
+ conabio -> data_final -> {aegypti albopictus} -> {range lgcp}
+ 
+ 
 
  
 }")
@@ -175,7 +190,7 @@ culicidae_mx_dataset |>
     kableExtra::scroll_box(width = "100%", height = "500px")
 ```
 
-## Area de ocupación
+## Área de ocupación
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
@@ -208,6 +223,7 @@ tibble::tibble(specie = c(rep("Aedes aegypti", 12)),
                            width = "100%")
 ```
 
+##
 ## Dios Botic!
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
