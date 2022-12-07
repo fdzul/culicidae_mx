@@ -126,7 +126,7 @@ DiagrammeR::grViz("digraph {
 
 ::: {.column width="40%"}
 ```{r}
-fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx", 
+fs::dir_tree("/Users/HOME/Dropbox/projects/culicidae_mx", 
              recurse = 0)
 ```
 
@@ -135,7 +135,7 @@ fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx",
 ::: {.column width="60%"}
 
 ```{r}
-fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets", 
+fs::dir_tree("/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets", 
              recurse = 0)
 ```
 
@@ -148,7 +148,7 @@ fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.
 &nbsp;
 
 ```{r}
-fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
+fs::dir_tree("/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data", 
              recurse = 1)
 ```
 
@@ -156,7 +156,7 @@ fs::dir_tree("/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # Step 1. load the dataset ###
-load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+load("/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
 culicidae_mx_dataset |>
     dplyr::mutate(specie = dplyr::case_when(specie %in% c("Aedes aegypti",
                                                           "Aedes Stegomyia  aegypti  Linnaeus, 1762 ") ~ "Aedes aegypi",
@@ -190,38 +190,42 @@ culicidae_mx_dataset |>
     kableExtra::scroll_box(width = "100%", height = "800px")
 ```
 
-## Área de ocupación
+## Rangos de Distribución
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
-tibble::tibble(specie = c(rep("Aedes aegypti", 12)),
-               type_range = c(rep("boundary", 3),
-                              rep("concave_hull", 3),
-                              rep("convex_hull", 3),
-                              rep("tsa", 3)),
-               scale = c("locality", 
-                         "municipality",
-                         "state",
-                         "locality",
-                         "municipality",
-                         "state",
-                         "locality",
-                         "municipality",
-                         "state",
-                         "locality",
-                         "municipality",
-                         "state"),
-               area = c(6580, 7668, 7668, 6580, 7664, 7664, 6580, 7664, 7664, 6580, 7664, 7664),
-               unique_records = c(3183, 3547, 3547, 3183, 3548, 3548, 3183, 3548, 3548, 3183, 3548, 3548),
-               range_area = c(11201.91, 831692.2, 1947860, 37677.69, 1752088, 1752088, 38792.27, 1938004, 1938004, 39200, 1964000, 1963975),
-               extent_ocurrence = c(37649, 1864072, 1864072, 37649.26, 1869299, 1869299, 37649.26, 1869299, 1869299, 37649.26, 1869299, 1869299),
-               area_occupancy = c(1645, 1917, 1917, 1645, 1916, 1964, 1645, 1916, 1916, 1645, 1916, 1916),
-               species_range = c(1277, 580, 31, 46004, 160, 160, 47187, 327, 327, 951, 34, 34)) |>
-    kableExtra::kable() |>
-    kableExtra::kable_classic() |>
-    kableExtra::scroll_box(height = "800px",
-                           width = "100%")
+```{r, echo=FALSE}
+#| column: screen-inset-shaded
+#| layout-nrow: 2
+# Step 1. load the dataset ####
+load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/ranges/ranges_boundary_aedes_aegypti.RData")
+
+# Step 2. load the ranges map ####
+rangemap::rangemap_plot(range_boundary_mun, 
+                        #add_EOO = TRUE, 
+                        add_occurrences = TRUE,
+                        legend = TRUE,
+                        scalebar = TRUE,
+                        occurrences_color = "#E01E5A",
+                        scalebar_position ="bottomright",
+                        extent_color = "black",
+                        range_color	= "#2EB67D", 
+                        northarrow = TRUE,
+                        basemap_color = "gray95",
+                        legend_position = "bottomleft")
+rangemap::rangemap_plot(range_boundary_mun, 
+                        add_EOO = TRUE, 
+                        #add_occurrences = TRUE,
+                        legend = TRUE,
+                        scalebar = TRUE,
+                        scalebar_position ="bottomright",
+                        extent_color = "black",
+                        range_color	= "#2EB67D", 
+                        northarrow = TRUE,
+                        basemap_color = "gray95",
+                        legend_position = "bottomleft")
+
 ```
+
 
 ##
 ## Dios Botic!

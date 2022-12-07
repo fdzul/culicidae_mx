@@ -8,7 +8,7 @@
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.1.251">
 <title>index</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -423,8 +423,8 @@ Herón Huerta
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="htmlwidget-894d82f75a0d576577c2" style="width:100%;height:100%;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-894d82f75a0d576577c2">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  conabio [label = \"CONABIO\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n ###\n aegypti [label = \"Aedes agypti\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n albopictus [label = \"Aedes albopictus\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n range [label = \"Rangos de Distribución\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n lgcp [label = \"Log Gaussian Cox Process\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif conabio}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n revision -> data_final\n conabio -> data_final -> {aegypti albopictus} -> {range lgcp}\n \n \n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-84c21162733f8ce0798a" style="width:100%;height:100%;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-84c21162733f8ce0798a">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  conabio [label = \"CONABIO\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n ###\n aegypti [label = \"Aedes agypti\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n albopictus [label = \"Aedes albopictus\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n range [label = \"Rangos de Distribución\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n lgcp [label = \"Log Gaussian Cox Process\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif conabio}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n revision -> data_final\n conabio -> data_final -> {aegypti albopictus} -> {range lgcp}\n \n \n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="organización-de-las-bases-de-datos" class="slide level2"><h2>Organización de las Bases de Datos</h2>
@@ -433,10 +433,10 @@ Herón Huerta
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx"</span>, </span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"/Users/HOME/Dropbox/projects/culicidae_mx"</span>, </span>
 <span id="cb1-2"><a href="#cb1-2"></a>             <span class="at">recurse =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx
+<pre><code>/Users/HOME/Dropbox/projects/culicidae_mx
 ├── 1.datasets
 ├── 2.scripts
 ├── 3.outputs
@@ -447,10 +447,10 @@ Herón Huerta
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets"</span>, </span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets"</span>, </span>
 <span id="cb3-2"><a href="#cb3-2"></a>             <span class="at">recurse =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets
+<pre><code>/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets
 ├── 1.1.raw_data
 ├── 1.2.processed_data
 ├── 1.3.download_data
@@ -464,16 +464,16 @@ Herón Huerta
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <p>&nbsp;</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data"</span>, </span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data"</span>, </span>
 <span id="cb5-2"><a href="#cb5-2"></a>             <span class="at">recurse =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>/Users/fdzul/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data
+<pre><code>/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.1.raw_data
 ├── 1.1.1.original
 │   ├── Actualizada 2022. 22-09.xlsx
 │   ├── Anopheles_2015_2022_InDRE.xlsx
 │   ├── Base de datos_mosquitos_SANTOS_ultima version.xlsx
-│   ├── Base_mosquitos_ID_HH 2015-2020.xlsx
-│   └── base_datosAldo.xlsx
+│   ├── base_datosAldo.xlsx
+│   └── Base_mosquitos_ID_HH 2015-2020.xlsx
 └── 1.1.2.rename
     ├── anopheles_indre_dataset.xlsx
     ├── culicidae_aldo_dataset.xlsx
@@ -923,15 +923,15 @@ Herón Huerta
   </tr>
 <tr>
 <td style="text-align:left;"> review </td>
-   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;scapularis&nbsp; Rondani, 1848 </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 1 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> review </td>
    <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;Scapularis Group species </td>
    <td style="text-align:right;"> 2 </td>
    <td style="text-align:right;"> 2 </td>
+  </tr>
+<tr>
+<td style="text-align:left;"> review </td>
+   <td style="text-align:left;"> Aedes Ochlerotatus &nbsp;scapularis&nbsp; Rondani, 1848 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
   </tr>
 <tr>
 <td style="text-align:left;"> review </td>
@@ -2126,159 +2126,18 @@ Herón Huerta
 
 </div>
 </div>
-</section><section id="área-de-ocupación" class="slide level2"><h2>Área de ocupación</h2>
+</section><section id="rangos-de-distribución" class="slide level2"><h2>Rangos de Distribución</h2>
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
-<div class="cell">
-<div class="cell-output-display">
-
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:800px; overflow-x: scroll; width:100%; "><table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
-<thead><tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> specie </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> type_range </th>
-   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> scale </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> area </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> unique_records </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> range_area </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> extent_ocurrence </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> area_occupancy </th>
-   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> species_range </th>
-  </tr></thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> boundary </td>
-   <td style="text-align:left;"> locality </td>
-   <td style="text-align:right;"> 6580 </td>
-   <td style="text-align:right;"> 3183 </td>
-   <td style="text-align:right;"> 11201.91 </td>
-   <td style="text-align:right;"> 37649.00 </td>
-   <td style="text-align:right;"> 1645 </td>
-   <td style="text-align:right;"> 1277 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> boundary </td>
-   <td style="text-align:left;"> municipality </td>
-   <td style="text-align:right;"> 7668 </td>
-   <td style="text-align:right;"> 3547 </td>
-   <td style="text-align:right;"> 831692.20 </td>
-   <td style="text-align:right;"> 1864072.00 </td>
-   <td style="text-align:right;"> 1917 </td>
-   <td style="text-align:right;"> 580 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> boundary </td>
-   <td style="text-align:left;"> state </td>
-   <td style="text-align:right;"> 7668 </td>
-   <td style="text-align:right;"> 3547 </td>
-   <td style="text-align:right;"> 1947860.00 </td>
-   <td style="text-align:right;"> 1864072.00 </td>
-   <td style="text-align:right;"> 1917 </td>
-   <td style="text-align:right;"> 31 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> concave_hull </td>
-   <td style="text-align:left;"> locality </td>
-   <td style="text-align:right;"> 6580 </td>
-   <td style="text-align:right;"> 3183 </td>
-   <td style="text-align:right;"> 37677.69 </td>
-   <td style="text-align:right;"> 37649.26 </td>
-   <td style="text-align:right;"> 1645 </td>
-   <td style="text-align:right;"> 46004 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> concave_hull </td>
-   <td style="text-align:left;"> municipality </td>
-   <td style="text-align:right;"> 7664 </td>
-   <td style="text-align:right;"> 3548 </td>
-   <td style="text-align:right;"> 1752088.00 </td>
-   <td style="text-align:right;"> 1869299.00 </td>
-   <td style="text-align:right;"> 1916 </td>
-   <td style="text-align:right;"> 160 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> concave_hull </td>
-   <td style="text-align:left;"> state </td>
-   <td style="text-align:right;"> 7664 </td>
-   <td style="text-align:right;"> 3548 </td>
-   <td style="text-align:right;"> 1752088.00 </td>
-   <td style="text-align:right;"> 1869299.00 </td>
-   <td style="text-align:right;"> 1964 </td>
-   <td style="text-align:right;"> 160 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> convex_hull </td>
-   <td style="text-align:left;"> locality </td>
-   <td style="text-align:right;"> 6580 </td>
-   <td style="text-align:right;"> 3183 </td>
-   <td style="text-align:right;"> 38792.27 </td>
-   <td style="text-align:right;"> 37649.26 </td>
-   <td style="text-align:right;"> 1645 </td>
-   <td style="text-align:right;"> 47187 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> convex_hull </td>
-   <td style="text-align:left;"> municipality </td>
-   <td style="text-align:right;"> 7664 </td>
-   <td style="text-align:right;"> 3548 </td>
-   <td style="text-align:right;"> 1938004.00 </td>
-   <td style="text-align:right;"> 1869299.00 </td>
-   <td style="text-align:right;"> 1916 </td>
-   <td style="text-align:right;"> 327 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> convex_hull </td>
-   <td style="text-align:left;"> state </td>
-   <td style="text-align:right;"> 7664 </td>
-   <td style="text-align:right;"> 3548 </td>
-   <td style="text-align:right;"> 1938004.00 </td>
-   <td style="text-align:right;"> 1869299.00 </td>
-   <td style="text-align:right;"> 1916 </td>
-   <td style="text-align:right;"> 327 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> tsa </td>
-   <td style="text-align:left;"> locality </td>
-   <td style="text-align:right;"> 6580 </td>
-   <td style="text-align:right;"> 3183 </td>
-   <td style="text-align:right;"> 39200.00 </td>
-   <td style="text-align:right;"> 37649.26 </td>
-   <td style="text-align:right;"> 1645 </td>
-   <td style="text-align:right;"> 951 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> tsa </td>
-   <td style="text-align:left;"> municipality </td>
-   <td style="text-align:right;"> 7664 </td>
-   <td style="text-align:right;"> 3548 </td>
-   <td style="text-align:right;"> 1964000.00 </td>
-   <td style="text-align:right;"> 1869299.00 </td>
-   <td style="text-align:right;"> 1916 </td>
-   <td style="text-align:right;"> 34 </td>
-  </tr>
-<tr>
-<td style="text-align:left;"> Aedes aegypti </td>
-   <td style="text-align:left;"> tsa </td>
-   <td style="text-align:left;"> state </td>
-   <td style="text-align:right;"> 7664 </td>
-   <td style="text-align:right;"> 3548 </td>
-   <td style="text-align:right;"> 1963975.00 </td>
-   <td style="text-align:right;"> 1869299.00 </td>
-   <td style="text-align:right;"> 1916 </td>
-   <td style="text-align:right;"> 34 </td>
-  </tr>
-</tbody>
-</table></div>
-
+<div class="cell column-screen-inset-shaded quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-6-2.png" width="960"></p>
+</div>
 </div>
 </div>
 </section><section id="section" class="slide level2"><h2></h2>
