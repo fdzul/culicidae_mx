@@ -416,15 +416,19 @@ Herón Huerta
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <p>&nbsp;</p>
 <ul>
-<li>Fuentes de Información y Flujograma</li>
-<li>Organizacion</li>
+<li><p>Fuentes de Información y Flujograma</p></li>
+<li><p>Organizacion</p></li>
+<li><p>Registros de <em>Aedes aegypti</em></p></li>
+<li><p>Registro de otras especied.</p></li>
+<li><p>Rangos de Distribución y Área de Ocupancia.</p></li>
+<li><p>Log Gaussian Cox Process.</p></li>
 </ul></section><section id="flujograma-de-la-información" class="slide level2"><h2>Flujograma de la Información</h2>
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <p>&nbsp;</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="htmlwidget-b2cb3f80b290567b13db" style="width:100%;height:100%;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b2cb3f80b290567b13db">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  conabio [label = \"CONABIO\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n ###\n aegypti [label = \"Aedes agypti\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n albopictus [label = \"Aedes albopictus\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n range [label = \"Rangos de Distribución\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n lgcp [label = \"Log Gaussian Cox Process\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif conabio}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n revision -> data_final\n conabio -> data_final -> {aegypti albopictus} -> {range lgcp}\n \n \n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4430d705775b6929e1ed" style="width:100%;height:100%;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4430d705775b6929e1ed">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  conabio [label = \"CONABIO\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n ###\n aegypti [label = \"Aedes agypti\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n albopictus [label = \"Aedes albopictus\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n range [label = \"Rangos de Distribución\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n lgcp [label = \"Log Gaussian Cox Process\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif conabio}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n revision -> data_final\n conabio -> data_final -> {aegypti albopictus} -> {range lgcp}\n \n \n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section id="organización-de-las-bases-de-datos" class="slide level2"><h2>Organización de las Bases de Datos</h2>
@@ -2154,7 +2158,7 @@ Herón Huerta
 </div>
 
 </div>
-<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section><section id="dios-botic" class="slide level2"><h2>Dios Botic!</h2>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section><section id="gracias" class="slide level2"><h2>Gracias!</h2>
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <p>&nbsp;</p>
 <ul>
@@ -2163,7 +2167,9 @@ Herón Huerta
 <li><p><strong><em>celular</em></strong> : <a href="">8139945623</a></p></li>
 <li><p><strong><em>slides</em></strong>: https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset</p></li>
 </ul>
-<p>.footnote[La presentación fue creada via <a href="https://github.com/yihui/xaringan"><strong>xaringan</strong></a>, <a href="https://revealjs.com/"><strong>revealjs</strong></a>, <a href="https://remarkjs.com">remark.js</a>, <a href="http://yihui.name/knitr"><strong>knitr</strong></a>, &amp; <a href="https://rmarkdown.rstudio.com">R Markdown</a> en <a href="">R</a> &amp; <a href="2.R_Scripts/libs/rstudio_leaflet/rstudio_leaflet.css">RStudio</a>.]</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>La presentación fue creada via <a href="https://github.com/yihui/xaringan"><strong>xaringan</strong></a>, <a href="https://revealjs.com/"><strong>revealjs</strong></a>, <a href="https://remarkjs.com">remark.js</a>, <a href="http://yihui.name/knitr"><strong>knitr</strong></a>, &amp; <a href="https://rmarkdown.rstudio.com">R Markdown</a> en <a href="">R</a> &amp; <a href="2.R_Scripts/libs/rstudio_leaflet/rstudio_leaflet.css">RStudio</a></p>
 
 <img src="https://salud.yucatan.gob.mx/files/get/2889?v=1669754780" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset/#/title-slide">github.com/fdzul</a></p>

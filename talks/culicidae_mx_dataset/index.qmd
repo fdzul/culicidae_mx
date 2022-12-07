@@ -39,7 +39,16 @@ execute:
 &nbsp;
 
 -   Fuentes de Información y Flujograma
+
 -   Organizacion 
+
+-   Registros de *Aedes aegypti*
+
+-   Registro de otras especied.
+
+-   Rangos de Distribución y Área de Ocupancia.
+
+-   Log Gaussian Cox Process.
 
 ## Flujograma de la Información
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
@@ -388,7 +397,7 @@ library(patchwork)
 
 
 
-## Dios Botic!
+## Gracias!
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
 
@@ -401,8 +410,11 @@ library(patchwork)
 - ***slides***:     https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset
 
 
+&nbsp;
 
-.footnote[La presentación fue creada via [**xaringan**](https://github.com/yihui/xaringan),
+&nbsp;
+
+La presentación fue creada via [**xaringan**](https://github.com/yihui/xaringan),
 [**revealjs**](https://revealjs.com/),
 [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr),
-& [R Markdown](https://rmarkdown.rstudio.com) en [R]() & [RStudio](2.R_Scripts/libs/rstudio_leaflet/rstudio_leaflet.css).]
+& [R Markdown](https://rmarkdown.rstudio.com) en [R]() & [RStudio](2.R_Scripts/libs/rstudio_leaflet/rstudio_leaflet.css)
