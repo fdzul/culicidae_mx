@@ -256,7 +256,8 @@ $y_{ij}|n_{ij} \sim Poisson(|s_{ij}|exp(n_{ij}))$
 
 $n_{ij} = \beta{_0} + \beta{_1} \space x \space cov (s_{ij}) + f{_s}(s_{ij}) + f{_u}(s_{ij})$
 
-.tiny[.blue[.footnote[Moraga et al 2020]]]
+
+Moraga et al 2022
 
 ## Log Gaussian Cox Process
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
