@@ -238,8 +238,28 @@ rangemap::rangemap_plot(range_boundary_mun,
 
 ```
 
+## Log Gaussian Cox Process
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+**Modelo General** 
+$$ \varLambda{_s} = exp(n{_s})$$
+
+El modelo asume que los eventos (ocurrencia) son una parcial realización de un proceso Gausiano (log-Gaussian).
+
+ 
+ **Modelo en un Grid** 
+
+$$\varLambda_{ij} = \int\limits_{s_{ij}}^{} exp(n(s))ds$$
+$$\varLambda_{ij} \approx |s_{ij}| exp(n_{ij})$$
+donde $|s_{ij}|$ es el área de la celda $s_{ij}$
+
+$y_{ij}|n_{ij} \sim Poisson(|s_{ij}|exp(n_{ij}))$
+
+$n_{ij} = \beta{_0} + \beta{_1} \space x \space cov (s_{ij}) + f{_s}(s_{ij}) + f{_u}(s_{ij})$
+
+.tiny[.blue[.footnote[Moraga et al 2020]]]
 
 ## Log Gaussian Cox Process
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 # Step 1.1 load the dataset ####
 #load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
@@ -303,7 +323,70 @@ library(patchwork)
 ```
 
 
-##
+## Log Gaussian Cox Process
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+# Step 1.1 load the dataset ####
+
+load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+
+
+#  Step 1.2 extract the specie ####
+dataset <- culicidae_mx_dataset |>
+    dplyr::filter(specie %in% c("Aedes(Stegomyia) aegypti (Linnaeus, 1762)",
+                                "Aedes aegypti")) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(long = as.numeric(long)) |>
+    dplyr::select(dataset, long, lat) |>
+    dplyr::distinct()
+ver <- sf::st_read("C:/Users/HOME/Downloads/supplementary file/supplementary map 1.shp",
+                   quiet = TRUE) |>
+    sf::st_drop_geometry() 
+
+gc <- vroom::vroom("C:/Users/HOME/Downloads/aegypti.csv")
+
+source("C:/Users/HOME/Dropbox/projects/culicidae_mx/4.functions/lgcp_occ.R")
+veim <- lgcp_occ(dataset = dataset |>
+                           dplyr::filter(dataset == "veim"),
+                       resolution = .3, # 111.132 * 0.2
+                       longitude = "long",
+                       latitude = "lat",
+                       plot = FALSE,
+                       cve_state = c("30"),
+                       name_palette = "YlGnBu",
+                       k = 1)
+res_gc <- lgcp_occ(dataset = gc,
+               resolution = .3, # 111.132 * 0.2
+               longitude = "X",
+               latitude = "Y",
+               plot = FALSE,
+               cve_state = "30",
+               name_palette = "YlGnBu",
+               k = 1)
+
+ver_res <- lgcp_occ(dataset = ver,
+                    resolution = .3, # 111.132 * 0.2
+                    longitude = "Longitude",
+                    latitude = "Latitude",
+                    plot = FALSE,
+                    cve_state = "30",
+                    name_palette = "YlGnBu",
+                    k = 1)
+
+
+library(patchwork)
+(veim$map + 
+        ggplot2::ggtitle("veim") | 
+        res_gc$map + ggplot2::ggtitle("gc") | ver_res$map +
+    ggplot2::ggtitle("Ver"))
+    
+
+
+```
+
+
+
+
 ## Dios Botic!
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
