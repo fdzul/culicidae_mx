@@ -239,6 +239,69 @@ rangemap::rangemap_plot(range_boundary_mun,
 ```
 
 
+## Log Gaussian Cox Process
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
+# Step 1.1 load the dataset ####
+#load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+
+
+#  Step 1.2 extract the specie ####
+dataset <- culicidae_mx_dataset |>
+    dplyr::filter(specie %in% c("Aedes(Stegomyia) aegypti (Linnaeus, 1762)",
+                                "Aedes aegypti")) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(long = as.numeric(long)) |>
+    dplyr::select(dataset, long, lat) |>
+    dplyr::distinct()
+source("C:/Users/HOME/Dropbox/projects/culicidae_mx/4.functions/lgcp_occ.R")
+gbif_geodata <- lgcp_occ(dataset = dataset |>
+                             dplyr::filter(dataset == "gbif_geodata"),
+                         resolution = .3, # 111.132 * 0.2
+                         longitude = "long",
+                         latitude = "lat",
+                         plot = FALSE,
+                         cve_state = c("30"),
+                         name_palette = "YlGnBu",
+                         k = 1)
+
+gbif_spocc <- lgcp_occ(dataset = dataset |>
+                             dplyr::filter(dataset == "gbif_spocc"),
+                         resolution = .3, # 111.132 * 0.2
+                         longitude = "long",
+                         latitude = "lat",
+                         plot = FALSE,
+                         cve_state = c("30"),
+                         name_palette = "YlGnBu",
+                         k = 1)
+
+indre <- lgcp_occ(dataset = dataset |>
+                           dplyr::filter(dataset == "indre"),
+                       resolution = .3, # 111.132 * 0.2
+                       longitude = "long",
+                       latitude = "lat",
+                       plot = FALSE,
+                       cve_state = c("30"),
+                       name_palette = "YlGnBu",
+                       k = 1)
+veim <- lgcp_occ(dataset = dataset |>
+                           dplyr::filter(dataset == "veim"),
+                       resolution = .3, # 111.132 * 0.2
+                       longitude = "long",
+                       latitude = "lat",
+                       plot = FALSE,
+                       cve_state = c("30"),
+                       name_palette = "YlGnBu",
+                       k = 1)
+library(patchwork)
+(gbif_geodata$map +
+        ggplot2::ggtitle("geodata")| gbif_spocc$map +
+        ggplot2::ggtitle("spocc"))/
+    (indre$map +
+         ggplot2::ggtitle("Indre")| veim$map +
+         ggplot2::ggtitle("veim"))
+```
+
 
 ##
 ## Dios Botic!
