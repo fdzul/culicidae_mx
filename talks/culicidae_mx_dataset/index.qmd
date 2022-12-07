@@ -195,7 +195,6 @@ culicidae_mx_dataset |>
 
 ```{r, echo=FALSE}
 #| column: screen-inset-shaded
-#| layout-nrow: 2
 # Step 1. load the dataset ####
 load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/ranges/ranges_boundary_aedes_aegypti.RData")
 
@@ -212,6 +211,19 @@ rangemap::rangemap_plot(range_boundary_mun,
                         northarrow = TRUE,
                         basemap_color = "gray95",
                         legend_position = "bottomleft")
+
+```
+
+
+## Rangos de Distribución
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019"> 
+
+```{r, echo=FALSE}
+#| column: screen-inset-shaded
+# Step 1. load the dataset ####
+load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/ranges/ranges_boundary_aedes_aegypti.RData")
+
+# Step 2. load the ranges map ####
 rangemap::rangemap_plot(range_boundary_mun, 
                         add_EOO = TRUE, 
                         #add_occurrences = TRUE,
@@ -225,6 +237,7 @@ rangemap::rangemap_plot(range_boundary_mun,
                         legend_position = "bottomleft")
 
 ```
+
 
 
 ##
