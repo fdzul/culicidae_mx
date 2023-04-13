@@ -1,0 +1,479 @@
+---
+format: 
+  revealjs:
+    #theme: ["theme/q-theme.scss"]
+    slide-number: c/t
+    logo: "https://salud.yucatan.gob.mx/files/get/2889?v=1669754780"
+    footer: "[github.com/fdzul](https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset/#/title-slide)"
+    code-copy: true
+    center-title-slide: false
+highlight-style: a11y
+code-link: true
+height: 1080
+width: 1600
+execute: 
+  eval: true
+  echo: true
+---
+
+<h1>Distribución de Mosquitos con Importancia<br>en Salud Pública en México</h1>
+
+<h2> </h2>
+
+<hr>
+<h3> Felipe Dzul Manzanilla </h3><h3>Fabián Correa Morales</h3> <h3>Herón Huerta</h3>
+
+<h3> 2022-06-02 </h3>
+<br>
+
+<h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/fdzul](https://fdzul.github.io/web_site_fadm/)
+
+
+![](an_aztecus_sdm.png){.absolute top=450 left=600 width="800"}
+
+## Bases de Datos
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+## [Registross de Culicidae en México]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+```{r, echo=FALSE}
+# Step 1. load the culicidae_mx dataset ####
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "linux"){
+    
+}
+
+
+
+x <- culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::filter(genero %in% c("Aedes",
+                                "Anopheles",
+                                "Coquillettidia",
+                                "Culex",
+                                "Culiseta",
+                                "Haemagogus",
+                                "Mansonia",
+                                "Psorophora",
+                                "Sabethes",
+                                "Trichoprosopon")) |>
+    dplyr::group_by(genero) |>
+    dplyr::summarise(x1 = length(unique(specie)),
+                     "occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(specie, long, lat))  
+
+
+y <- culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::filter(genero %in% c("Aedes",
+                                "Anopheles",
+                                "Coquillettidia",
+                                "Culex",
+                                "Culiseta",
+                                "Haemagogus",
+                                "Mansonia",
+                                "Psorophora",
+                                "Sabethes",
+                                "Trichoprosopon")) |>
+    dplyr::filter(specie %in% c("Aedes aegypti",
+                                "Aedes albopictus",
+                                "Aedes vexans",
+                                "Aedes epactius",
+                                "Aedes scapularis",
+                                "Aedes sollicitans",
+                                "Aedes taeniorhynchus",
+                                "Aedes triseriatus",
+                                "Aedes trivittatus",
+                                # Anopheles
+                                "Anopheles aztecus",
+                                "Anopheles freeborni",
+                                "Anopheles pseudopunctipennis",
+                                "Anopheles punctipennis",
+                                "Anopheles punctimacula",
+                                "Anopheles quadrimaculatus",
+                                "Anopheles neivai",
+                                "Anopheles albimanus",
+                                "Anopheles vestitipennis",
+                                "Anopheles darlingi",
+                                # Coquilletidia
+                                "Coquillettidia perturbans",
+                                "Coquillettidia venezuelensis",
+                                "Coquillettidia nigricans",
+                                # Culex
+                                "Culex coronator",
+                                "Culex erithrothorax",
+                                "Culex nigripalpus",
+                                "Culex coronator",
+                                "Culex pipiens",
+                                "Culex quinquefasciatus",
+                                "Culex restuans",
+                                "Culex salinarius",
+                                "Culex stigmatosoma",
+                                "Culex tarsalis",
+                                "Culex thriambus",
+                                # Culiseta
+                                "Culiseta inornata",
+                                "Culiseta particeps",
+                                "Culiseta melanura",
+                                # Haemagogus
+                                "Haemagogus equinus",
+                                "Haemagogus mesodentatus",
+                                "Haemagogus anastasionis",
+                                # Mansonia 
+                                "Mansonia titillans",
+                                # Psorophora
+                                "Psorophora ciliata",
+                                "Psorophora ferox",
+                                "Psorophora confinnis",
+                                # Sabethes
+                                "Sabethes chloropterus",
+                                # Trichoprosopon
+                                "Trichoprosopon digitatum")) |>
+    dplyr::group_by(genero) |>
+    dplyr::summarise(x1 = length(unique(specie)),
+                     "occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(specie, long, lat))
+
+    
+tibble::tibble(Genero = x$genero,
+               Especies = x$x1,
+               "Especies IM" = y$x1,
+               "Registros" = x$occ,
+               "Registros IM" = y$occ,
+               "Registros Unicos" = x$unique_occ,
+               "Registros Unicos IM" = y$unique_occ) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic()
+```
+
+
+## [Registros del Género **Aedes**]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+<html>
+<head>
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #330019;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="grid-container1">
+  <div class="grid-item">Registros</div>
+  <div class="grid-item">Registros Únicos</div>
+  <div class="grid-item"><img src="occ_aedes.jpg"></div>
+  <div class="grid-item"><img src="unique_occ_aedes.jpg"></div>
+ 
+</div>
+</body>
+</html>
+
+
+## [Registros del Género **Aedes**]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+```{r aedes, echo=FALSE}
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "linux"){
+    
+}
+ culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::filter(!specie %in% c("Wyeomyia sp", "Uranotaenia sp",     
+                                 "Psorophora sp2","Psorophora sp1",      
+                                 "Psorophora sp", "Culex sp2",           
+                                 "Culex sp1","Culex sp",            
+                                 "Culex Melanoconion sp", "Anopheles sp",        
+                                 "Aedes sp3", "Aedes sp2",           
+                                 "Aedes sp1","Aedes sp",             
+                                 "Aedes Aedes sp")) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::group_by(dataset,genero, specie) |>
+    dplyr::summarise("occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(long, lat)) |>
+    dplyr::filter(genero != "NA") |>
+    dplyr::filter(specie %in% c("Aedes aegypti",
+                                "Aedes albopictus",
+                                "Aedes vexans",
+                                "Aedes epactius",
+                                "Aedes scapularis",
+                                "Aedes sollicitans",
+                                "Aedes taeniorhynchus",
+                                "Aedes triseriatus",
+                                "Aedes trivittatus")) |>
+    dplyr::mutate(specie = stringr::str_replace_all(specie,
+                                                    pattern = "Aedes ",
+                                                    replacement = "Ae. ")) |>
+    dplyr::select(-occ, -genero) |>
+    tidyr::pivot_wider(id_cols = specie,
+                       names_from = dataset,
+                       values_from = unique_occ,
+                       values_fill = 0) |> 
+    dplyr::mutate(registros = rowSums(dplyr::across(cdmx:veim))) |>
+    dplyr::mutate("%" = round((registros/sum(registros)) *100, 1)) |>
+    dplyr::arrange(dplyr::desc(`%`)) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic()
+```
+
+## [Registros del Género **Anopheles**]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+
+```{r anopheles, echo=FALSE}
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "linux"){
+    
+}
+ 
+#  anopheles
+culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::filter(!specie %in% c("Wyeomyia sp", "Uranotaenia sp",     
+                                 "Psorophora sp2","Psorophora sp1",      
+                                 "Psorophora sp", "Culex sp2",           
+                                 "Culex sp1","Culex sp",            
+                                 "Culex Melanoconion sp", "Anopheles sp",        
+                                 "Aedes sp3", "Aedes sp2",           
+                                 "Aedes sp1","Aedes sp",             
+                                 "Aedes Aedes sp")) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::group_by(dataset,genero, specie) |>
+    dplyr::summarise("occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(long, lat)) |>
+    dplyr::filter(genero != "NA") |>
+    dplyr::filter(specie %in% c("Anopheles aztecus",
+                                "Anopheles freeborni",
+                                "Anopheles pseudopunctipennis",
+                                "Anopheles punctipennis",
+                                "Anopheles punctimacula",
+                                "Anopheles quadrimaculatus",
+                                "Anopheles neivai",
+                                "Anopheles albimanus",
+                                "Anopheles vestitipennis",
+                                "Anopheles darlingi")) |>
+    dplyr::mutate(specie = stringr::str_replace_all(specie,
+                                                    pattern = "Anopheles ",
+                                                    replacement = "An. ")) |>
+    dplyr::select(-occ, -genero) |>
+    tidyr::pivot_wider(id_cols = specie,
+                       names_from = dataset,
+                       values_from = unique_occ,
+                       values_fill = 0) |>
+    dplyr::mutate(registros = rowSums(dplyr::across(cdmx:veim))) |>
+    dplyr::mutate("%" = round((registros/sum(registros)) *100, 1)) |>
+    dplyr::arrange(dplyr::desc(`%`)) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic()  
+```
+
+## [Registros del Género **Culex**]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+```{r culex, echo=FALSE}
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "linux"){
+    
+}
+culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::filter(!specie %in% c("Wyeomyia sp", "Uranotaenia sp",     
+                                 "Psorophora sp2","Psorophora sp1",      
+                                 "Psorophora sp", "Culex sp2",           
+                                 "Culex sp1","Culex sp",            
+                                 "Culex Melanoconion sp", "Anopheles sp",        
+                                 "Aedes sp3", "Aedes sp2",           
+                                 "Aedes sp1","Aedes sp",             
+                                 "Aedes Aedes sp")) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::group_by(dataset,genero, specie) |>
+    dplyr::summarise("occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(long, lat)) |>
+    dplyr::filter(genero != "NA") |>
+    dplyr::filter(specie %in% c("Culex coronator",
+                                "Culex erithrothorax",
+                                "Culex nigripalpus",
+                                "Culex coronator",
+                                "Culex pipiens",
+                                "Culex quinquefasciatus",
+                                "Culex restuans",
+                                "Culex salinarius",
+                                "Culex stigmatosoma",
+                                "Culex tarsalis",
+                                "Culex thriambus")) |>
+    dplyr::mutate(specie = stringr::str_replace_all(specie,
+                                                    pattern = "Culex ",
+                                                    replacement = "Cx. ")) |>
+    dplyr::select(-occ, -genero) |>
+    tidyr::pivot_wider(id_cols = specie,
+                       names_from = dataset,
+                       values_from = unique_occ,
+                       values_fill = 0) |>
+    dplyr::mutate(registros = rowSums(dplyr::across(cdmx:veim))) |>
+    dplyr::mutate("%" = round((registros/sum(registros)) *100, 1)) |>
+    dplyr::arrange(dplyr::desc(`%`)) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic() 
+```
+
+## [Registros del Género **Culiseta** & **Coquilletidia**]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+```{r miscelanea, echo=FALSE}
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "linux"){
+    
+}
+culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::group_by(dataset, genero, specie) |>
+    dplyr::summarise("occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(long, lat),
+                     .groups = "drop") |>
+    dplyr::filter(genero != "NA") |>
+    dplyr::filter(specie %in% c("Culiseta inornata",
+                                "Culiseta particeps",
+                                "Culiseta melanura",
+                                "Coquillettidia perturbans",
+                                "Coquillettidia venezuelensis",
+                                "Coquillettidia nigricans")) |>
+    dplyr::select(-occ) |>
+    tidyr::pivot_wider(id_cols = c(genero, specie),
+                       names_from = dataset,
+                       values_from = unique_occ,
+                       values_fill = 0) |>
+    dplyr::mutate(registros = rowSums(dplyr::across(cdmx:ro))) |>
+    dplyr::mutate("%" = round((registros/sum(registros)) *100, 1)) |>
+    dplyr::arrange(genero) |>
+    dplyr::select(-genero) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic() 
+```
+
+
+## [Registros del Género **Haemagogus** & **Psorophora**]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+```{r hg_ps, echo=FALSE}
+if(as.vector(Sys.info()["sysname"]) == "Darwin"){
+    load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "Windows"){
+    load("C:/Users/HOME/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
+} else if(as.vector(Sys.info()["sysname"]) == "linux"){
+    
+}
+culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::group_by(dataset, genero, specie) |>
+    dplyr::summarise("occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(long, lat),
+                     .groups = "drop") |>
+    dplyr::filter(genero != "NA") |>
+    dplyr::filter(specie %in% c("Haemagogus equinus",
+                                "Haemagogus mesodentatus",
+                                "Haemagogus anastasionis",
+                                "Trichoprosopon digitatum",
+                                "Psorophora ciliata",
+                                "Psorophora ferox",
+                                "Psorophora confinnis")) |>
+    dplyr::select(-occ) |>
+    tidyr::pivot_wider(id_cols = c(genero, specie),
+                       names_from = dataset,
+                       values_from = unique_occ,
+                       values_fill = 0) |>
+    dplyr::mutate(registros = rowSums(dplyr::across(conabio:ro))) |>
+    dplyr::mutate("%" = round((registros/sum(registros)) *100, 1)) |>
+    dplyr::arrange(genero) |>
+    dplyr::select(-genero) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic() 
+```
+
+
+## [Gracias!]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+- ***Bio*** : https://fdzul.github.io/web_site_fadm/
+
+- ***email***       :     [felipe.dzul.m@gmail.com]()
+
+- ***celular***     :     [8139945623]()
+
+- ***slides***:     https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset
+
+
+&nbsp;
+
+&nbsp;
+
+La presentación fue creada via [**xaringan**](https://github.com/yihui/xaringan),
+[**revealjs**](https://revealjs.com/),
+[remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr),
+& [R Markdown](https://rmarkdown.rstudio.com) en [R]() & [RStudio](2.R_Scripts/libs/rstudio_leaflet/rstudio_leaflet.css)
