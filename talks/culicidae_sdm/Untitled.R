@@ -250,6 +250,36 @@ culicidae_mx_dataset |>
     kableExtra::kable() |>
     kableExtra::kable_classic() 
 
+culicidae_mx_dataset |> 
+    dplyr::filter(!is.na(specie)) |>
+    dplyr::filter(!is.na(long)) |>
+    dplyr::mutate(genera_specie = specie) |>
+    tidyr::separate(col = "genera_specie",
+                    into = c("genero")) |>
+    dplyr::filter(!is.na(genero)) |>
+    dplyr::group_by(dataset, genero, specie) |>
+    dplyr::summarise("occ" = dplyr::n(),
+                     "unique_occ" = dplyr::n_distinct(long, lat),
+                     .groups = "drop") |>
+    dplyr::filter(genero != "NA") |>
+    dplyr::filter(specie %in% c("Culiseta inornata",
+                                "Culiseta particeps",
+                                "Culiseta melanura",
+                                "Coquillettidia perturbans",
+                                "Coquillettidia venezuelensis",
+                                "Coquillettidia nigricans")) |>
+    dplyr::select(-occ) |>
+    tidyr::pivot_wider(id_cols = c(genero, specie),
+                       names_from = dataset,
+                       values_from = unique_occ,
+                       values_fill = 0) |>
+    dplyr::mutate(registros = rowSums(dplyr::across(cdmx:ro))) |>
+    dplyr::mutate("%" = round((registros/sum(registros)) *100, 1)) |>
+    dplyr::arrange(genero) |>
+    dplyr::select(-genero) |>
+    kableExtra::kable() |>
+    kableExtra::kable_classic()
+
 ########
 
 

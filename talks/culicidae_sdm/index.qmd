@@ -23,7 +23,7 @@ execute:
 <hr>
 <h3> Felipe Dzul Manzanilla </h3><h3>Fabián Correa Morales</h3> <h3>Herón Huerta</h3>
 
-<h3> 2022-06-02 </h3>
+<h3> 2023-04-14 </h3>
 <br>
 
 <h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/fdzul](https://fdzul.github.io/web_site_fadm/)
