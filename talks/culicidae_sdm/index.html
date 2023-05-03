@@ -317,7 +317,8 @@
       margin-right: 0; 
     }
   </style>
-<script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script><link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="index_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script><script src="index_files/libs/viz-1.8.2/viz.js"></script><link href="index_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+<script src="index_files/libs/grViz-binding-1.0.9/grViz.js"></script><script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script><link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -340,7 +341,7 @@ Fabián Correa Morales
 Herón Huerta
 </h3>
 <h3>
-2022-06-02
+2023-04-14
 </h3>
 <p><br></p>
 <h3>
@@ -350,6 +351,12 @@ Herón Huerta
 </section><section id="bases-de-datos" class="slide level2"><h2>Bases de Datos</h2>
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <p>&nbsp;</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b9d9dcd3690955d48f6b" style="width:100%;height:100%;"></div>
+<script type="application/json" data-for="htmlwidget-b9d9dcd3690955d48f6b">{"x":{"diagram":"digraph {\n                  # graph definitions\n  graph [layout = dot, rankdir = TB]\n  \n  # node definitions\n  node [shape = rectangle, style = filled, color = grey, \n  nodesep = 1, \n  fixedsize = false, \n  width = 1.7] \n  \n  # edge definition\n  edge [color = grey, arrowhead = normal, arrowtail = dot]\n  \n  ##### fuentes de información\n  \n  inf [label = \"Fuentes de Información\",  fillcolor =  \"#DB4437\", color = \"white\", fontcolor = \"white\"]\n  \n  \n  ##### datasets\n  \n  cenaprece [label = \"CENAPRECE\",  fillcolor =  \"#0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  indre [label = \"InDre\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  revision [label = \"Revisión\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  bas_per [label = \"Bases Personales\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  gbif [label = \"gbif\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n  \n  conabio [label = \"CONABIO\",  fillcolor =  \" #0F9D58\", color = \"white\", fontcolor = \"white\"]\n \n # \n anofeles [label = \"Anopheles\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n culicidae [label = \"Culicidae\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ao [label = \"Aldo Ortega\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n ro [label = \"Rafael Ojeda\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n spocc [label = \"spocc\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n geodata [label = \"geodata\",  fillcolor =  \"orange\", color = \"white\", fontcolor = \"black\"]\n \n\n # final dataset\n \n data_final [label = \"Culicidae_mx_dataset\",  fillcolor =  \"DodgerBlue\", color = \"white\", fontcolor = \"white\"]\n \n ###\n ae [label = \"Aedes\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n cx [label = \"Culex\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n an [label = \"Anopheles\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"]\n \n hg [label = \"Haemagogus\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"] \n \n ps [label = \"Psorophora\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"] \n \n cq [label = \"Coquillettidia\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"] \n \n cs [label = \"Culiseta\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"] \n \n sb [label = \"Sabethes\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"] \n \n tr [label = \"Trichoprosopon\",  fillcolor =  \"#2EB67D\", color = \"white\", fontcolor = \"white\"] \n \n \n \n ###\n \n sdm [label = \"SDM\",  fillcolor =  \"#E01E5A\", color = \"white\", fontcolor = \"white\"]\n \n \n ##### define the relation\n \n inf -> {cenaprece indre revision bas_per gbif conabio}\n indre -> {anofeles culicidae} -> data_final\n bas_per -> {ao ro} -> data_final\n \n gbif -> {spocc geodata} -> data_final\n cenaprece -> data_final\n revision -> data_final\n conabio -> data_final -> {ae cx an ps hg cq cs sb tr} -> {sdm}\n \n \n\n \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 </section><section id="registross-de-culicidae-en-méxico" class="slide level2"><h2><span style="color:#003300;align-items: center">Registross de Culicidae en México</span></h2>
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 <p>&nbsp;</p>

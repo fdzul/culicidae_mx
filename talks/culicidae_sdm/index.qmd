@@ -23,7 +23,7 @@ execute:
 <hr>
 <h3> Felipe Dzul Manzanilla </h3><h3>Fabián Correa Morales</h3> <h3>Herón Huerta</h3>
 
-<h3> 2023-04-14 </h3>
+<h3> 2023-05-03 </h3>
 <br>
 
 <h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/fdzul](https://fdzul.github.io/web_site_fadm/)
@@ -34,6 +34,96 @@ execute:
 ## Bases de Datos
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+```{r flujograma, dpi=400, echo=FALSE, fig.align ="center", out.height="100%", out.width = "100%"}
+DiagrammeR::grViz("digraph {
+                  # graph definitions
+  graph [layout = dot, rankdir = TB]
+  
+  # node definitions
+  node [shape = rectangle, style = filled, color = grey, 
+  nodesep = 1, 
+  fixedsize = false, 
+  width = 1.7] 
+  
+  # edge definition
+  edge [color = grey, arrowhead = normal, arrowtail = dot]
+  
+  ##### fuentes de información
+  
+  inf [label = 'Fuentes de Información',  fillcolor =  '#DB4437', color = 'white', fontcolor = 'white']
+  
+  
+  ##### datasets
+  
+  cenaprece [label = 'CENAPRECE',  fillcolor =  '#0F9D58', color = 'white', fontcolor = 'white']
+  
+  indre [label = 'InDre',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  
+  revision [label = 'Revisión',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  bas_per [label = 'Bases Personales',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  gbif [label = 'gbif',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+  
+  conabio [label = 'CONABIO',  fillcolor =  ' #0F9D58', color = 'white', fontcolor = 'white']
+ 
+ # 
+ anofeles [label = 'Anopheles',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ culicidae [label = 'Culicidae',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ ao [label = 'Aldo Ortega',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ ro [label = 'Rafael Ojeda',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ 
+ spocc [label = 'spocc',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ geodata [label = 'geodata',  fillcolor =  'orange', color = 'white', fontcolor = 'black']
+ 
+
+ # final dataset
+ 
+ data_final [label = 'Culicidae_mx_dataset',  fillcolor =  'DodgerBlue', color = 'white', fontcolor = 'white']
+ 
+ ###
+ ae [label = 'Aedes',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white']
+ 
+ cx [label = 'Culex',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white']
+ 
+ an [label = 'Anopheles',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white']
+ 
+ hg [label = 'Haemagogus',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white'] 
+ 
+ ps [label = 'Psorophora',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white'] 
+ 
+ cq [label = 'Coquillettidia',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white'] 
+ 
+ cs [label = 'Culiseta',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white'] 
+ 
+ sb [label = 'Sabethes',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white'] 
+ 
+ tr [label = 'Trichoprosopon',  fillcolor =  '#2EB67D', color = 'white', fontcolor = 'white'] 
+ 
+ 
+ 
+ ###
+ 
+ sdm [label = 'SDM',  fillcolor =  '#E01E5A', color = 'white', fontcolor = 'white']
+ 
+ 
+ ##### define the relation
+ 
+ inf -> {cenaprece indre revision bas_per gbif conabio}
+ indre -> {anofeles culicidae} -> data_final
+ bas_per -> {ao ro} -> data_final
+ 
+ gbif -> {spocc geodata} -> data_final
+ cenaprece -> data_final
+ revision -> data_final
+ conabio -> data_final -> {ae cx an ps hg cq cs sb tr} -> {sdm}
+ 
+ 
+
+ 
+}")
+
+```
+
+
 
 ## [Registross de Culicidae en México]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
