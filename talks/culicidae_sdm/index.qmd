@@ -502,6 +502,7 @@ culicidae_mx_dataset |>
 ```
 
 
+
 ## [Registros del Género **Haemagogus** & **Psorophora**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
@@ -544,6 +545,230 @@ culicidae_mx_dataset |>
     kableExtra::kable() |>
     kableExtra::kable_classic() 
 ```
+
+
+
+## [Aedes]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h1>
+</h1>
+<p>
+</p>
+
+::: grid-container
+
+::: grid-item
+![](Aedes aegypti.jpg)
+:::
+
+::: grid-item
+![](Aedes albopictus.jpg)
+:::
+
+
+:::
+
+</body>
+</html>
+
+
+## [Aedes]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h1>
+</h1>
+<p>
+</p>
+
+::: grid-container
+
+::: grid-item
+![](Aedes triseriatus.jpg)
+:::
+
+::: grid-item
+![](Aedes trivittatus.jpg)
+:::
+
+::: grid-item
+![](Aedes epactius.jpg)
+:::
+
+
+::: grid-item
+![](Aedes scapularis.jpg)
+:::
+
+::: grid-item
+![](Aedes sollicitans.jpg)
+:::
+
+::: grid-item
+![](Aedes taeniorhynchus.jpg)
+:::
+
+:::
+
+</body>
+</html>
+
+## [Culex]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+&nbsp;
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h1>
+</h1>
+<p>
+</p>
+
+::: grid-container
+
+::: grid-item
+![](Culex quinquefasciatus.jpg)
+:::
+
+::: grid-item
+![](Culex pipiens.jpg)
+:::
+
+::: grid-item
+![](Culex nigripalpus.jpg)
+:::
+
+
+::: grid-item
+![](Culex restuans.jpg)
+:::
+
+::: grid-item
+![](Culex salinarius.jpg)
+:::
+
+::: grid-item
+![](Culex tarsalis.jpg)
+:::
+
+:::
+
+</body>
+</html>
+
+
+## [Psorophora]{style="color:#003300;align-items: center"}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+<html>
+<head>
+```{=html}
+<style>
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 5px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+```
+</head>
+<body>
+<h1>
+</h1>
+<p>
+</p>
+
+::: grid-container1
+
+::: grid-item1
+![](Psorophora ciliata.jpg)
+:::
+
+::: grid-item1
+![](Psorophora confinnis.jpg)
+:::
+
+::: grid-item1
+![](Psorophora ferox.jpg)
+:::
+
+:::
+
+</body>
+</html>
+
+
 
 
 ## [Gracias!]{style="color:#003300;align-items: center"}
