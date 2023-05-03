@@ -781,7 +781,7 @@ culicidae_mx_dataset |>
 
 - ***celular***     :     [8139945623]()
 
-- ***slides***:     https://rad-peony-f290a5.netlify.app/talks/culicidae_mx_dataset
+- ***slides***:     https://rad-peony-f290a5.netlify.app/talks/sdm
 
 
 &nbsp;
