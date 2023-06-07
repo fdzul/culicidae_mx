@@ -21,7 +21,7 @@ execute:
 <h2> </h2>
 
 <hr>
-<h3> Felipe Dzul Manzanilla </h3><h3>Fabián Correa Morales</h3> <h3>Herón Huerta</h3>
+<h3> Felipe Dzul Manzanilla </h3><h3>Fabián Correa Morales</h3> <h3>Herón Huerta</h3> <h3>Victoria Pando-Robles</h3>
 
 <h3> 2023-05-03 </h3>
 <br>
