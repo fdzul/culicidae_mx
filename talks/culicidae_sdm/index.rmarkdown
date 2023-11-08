@@ -16,6 +16,7 @@ execute:
   echo: true
 ---
 
+
 <h1>Distribución de Mosquitos con Importancia<br>en Salud Pública en México</h1>
 
 <h2> </h2>
@@ -34,6 +35,7 @@ execute:
 ## Bases de Datos
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 ```{r flujograma, dpi=400, echo=FALSE, fig.align ="center", out.height="100%", out.width = "100%"}
 DiagrammeR::grViz("digraph {
                   # graph definitions
@@ -125,9 +127,11 @@ DiagrammeR::grViz("digraph {
 
 
 
+
 ## [Registross de Culicidae en México]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 
 ```{r, echo=FALSE}
 # Step 1. load the culicidae_mx dataset ####
@@ -253,6 +257,7 @@ tibble::tibble(Genero = x$genero,
 ```
 
 
+
 ## [Registros del Género **Aedes**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
@@ -291,6 +296,7 @@ tibble::tibble(Genero = x$genero,
 ## [Registros del Género **Aedes**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 
 ```{r aedes, echo=FALSE}
 if(as.vector(Sys.info()["sysname"]) == "Darwin"){
@@ -343,9 +349,11 @@ if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     kableExtra::kable_classic()
 ```
 
+
 ## [Registros del Género **Anopheles**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 
 
 ```{r anopheles, echo=FALSE}
@@ -402,9 +410,11 @@ culicidae_mx_dataset |>
     kableExtra::kable_classic()  
 ```
 
+
 ## [Registros del Género **Culex**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 
 ```{r culex, echo=FALSE}
 if(as.vector(Sys.info()["sysname"]) == "Darwin"){
@@ -459,9 +469,11 @@ culicidae_mx_dataset |>
     kableExtra::kable_classic() 
 ```
 
+
 ## [Registros del Género **Culiseta** & **Coquilletidia**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 ```{r miscelanea, echo=FALSE}
 if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
@@ -503,9 +515,11 @@ culicidae_mx_dataset |>
 
 
 
+
 ## [Registros del Género **Haemagogus** & **Psorophora**]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
+
 ```{r hg_ps, echo=FALSE}
 if(as.vector(Sys.info()["sysname"]) == "Darwin"){
     load("~/Library/CloudStorage/Dropbox/projects/culicidae_mx/1.datasets/1.5.output_datasets/culicidae_mx_dataset.RData")
@@ -548,12 +562,14 @@ culicidae_mx_dataset |>
 
 
 
+
 ## [Aedes]{style="color:#003300;align-items: center"}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 &nbsp;
 
 <html>
 <head>
+
 ```{=html}
 <style>
 .grid-container {
@@ -571,6 +587,7 @@ culicidae_mx_dataset |>
 }
 </style>
 ```
+
 </head>
 <body>
 <h1>
@@ -601,6 +618,7 @@ culicidae_mx_dataset |>
 
 <html>
 <head>
+
 ```{=html}
 <style>
 .grid-container {
@@ -618,6 +636,7 @@ culicidae_mx_dataset |>
 }
 </style>
 ```
+
 </head>
 <body>
 <h1>
@@ -663,6 +682,7 @@ culicidae_mx_dataset |>
 
 <html>
 <head>
+
 ```{=html}
 <style>
 .grid-container {
@@ -680,6 +700,7 @@ culicidae_mx_dataset |>
 }
 </style>
 ```
+
 </head>
 <body>
 <h1>
@@ -725,6 +746,7 @@ culicidae_mx_dataset |>
 
 <html>
 <head>
+
 ```{=html}
 <style>
 .grid-container1 {
@@ -742,6 +764,7 @@ culicidae_mx_dataset |>
 }
 </style>
 ```
+
 </head>
 <body>
 <h1>
